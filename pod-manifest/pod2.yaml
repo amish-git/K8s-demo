@@ -1,0 +1,11 @@
+kind: Pod
+apiVersion: v1
+metadata:
+      name: pod2
+      namespace: workshop
+spec: 
+    containers:
+      - name: container2
+        image: nginx
+        ports:
+           - containerPort: 80

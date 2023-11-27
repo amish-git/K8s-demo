@@ -1,0 +1,17 @@
+#pods with multiple containers
+kind: Pod
+apiVersion: v1
+metadata:
+  name: pod4
+  namespace: workshop
+spec:
+  containers:
+  - name: container-1
+    image: nginx
+    ports:
+         - containerPort: 80
+  - name: container-2
+    image: httpd
+    ports:
+         - containerPort: 8080
+

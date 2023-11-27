@@ -1,0 +1,20 @@
+#pods with resource limitations
+kind: Pod
+apiVersion: v1
+metadata:
+  name: pod3
+  namespace: workshop
+spec:
+  containers:
+  - name: container3
+    image: nginx
+    ports:
+         - containerPort: 80
+    resources:
+      limits:
+        memory: "128M"
+        cpu: "1"
+      requests:
+        memory: "64M"
+        cpu: "0.5"
+
